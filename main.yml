@@ -1,0 +1,9 @@
+---
+- name: Fedora Workstation
+  hosts: localhost
+  become: yes
+  tasks:
+    - name: upgrade all packages
+      dnf:
+        name: "*"
+        state: latest
